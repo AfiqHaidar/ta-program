@@ -1,0 +1,85 @@
+t/23/2025
+
+0.27 power on
+0.30 GUI Shutdown
+
+0.35 power on
+0.40 terminal sudo power off
+
+0.45 power on
+0.50 sudo shutdown now
+
+0.55 power on
+1.00 sudo init 0
+
+// ignore from here
+
+1.05 power on, set for
+1.10 virtual machine ACPI Shutdown
+
+1.10 power on
+1.15 virtual machine Reset 
+
+// ignore to here
+
+1.17 power on
+1.20 schedule for shutdown
+1.25 scheduled shutdown 
+
+1.30 power on
+1.35 force shutdown using end task
+
+1.40 power on
+1.45 force shutdpwm using vm close
+
+1.50 power on
+1.55 shutdown gracefully normal
+
+i imagine something like this roughtly
+
+SYSTEM RUNNING - scheduled shutdown for xxx -> SYSTEM RUNNING 
+SYSTEM RUNNING  - sudo power off/sudo shutdown now/sudo init 0/-> INITIATING SHUTDOWN - shutdown completed -> SYSTEM SHUTDOWN
+SYSTEM RUNNING   - corrupt or unclean log file -> Forceful System Shutdown Detected
+
+here's the data ive collected to create the system shutdown script
+
+source : LOG
+source_long : Systemd journal
+
+1. for the trigger "scheduled shutdown : xxx", use this artifact, so filtering specific patter of  "COMMAND=/usr/sbin/shutdown -h" if suffice, then go extract the date from datetime, and sctract that hour after -h, put it in the trigger. the next state is just "System Running"
+Systemd journal	reo [sudo  pid: 3131]      reo : TTY=pts/0 ; PWD=/home/reo/Desktop ; USER=root ; COMMAND=/usr/sbin/shutdown -h 20:25
+
+2.  for trigger "cmd : sudo power off", use this artifact, filterting "COMMAND=/usr/sbin/poweroff", if suffice then the okay, the next state is "Initiating Shutdown"
+Systemd journal	reo [sudo  pid: 3099]      reo : TTY=pts/0 ; PWD=/home/reo/Desktop ; USER=root ; COMMAND=/usr/sbin/poweroff
+
+3.  for trigger "cmd : sudo shutdown now", use this artifact, filterting "COMMAND=/usr/sbin/shutdown now", if suffice then the okay, the next state is "Initiating Shutdown"
+Systemd journal	reo [sudo  pid: 3158]      reo : TTY=pts/0 ; PWD=/home/reo/Desktop ; USER=root ; COMMAND=/usr/sbin/shutdown now
+
+4.  for trigger "cmd : sudo init 0", use this artifact, filterting "COMMAND=/usr/sbin/init 0", if suffice then the okay, the next state is "Initiating Shutdown"
+Systemd journal	 [sudo] reo : TTY=pts/0 ; PWD=/home/reo/Desktop ; USER=root ; COMMAND=/usr/sbin/init 0
+
+5.  for trigger "shutdown completed", use this artifact, filterting "Journal stopped", if suffice then the okay, the next state is "System Shutdown"
+Systemd journal	reo [systemd-journald  pid: 276] Journal stopped
+
+6. for the last one, well its suppose to detect if a forcefull shutdown has occur, use this artifact, filterting "system.journal corrupted or uncleanly shut down", if suffice then the okay idk what's a good next state and trigger, suggest to me
+Systemd journal	reo [systemd-journald  pid: 280] File /var/log/journal/6aef1e8dd4814dc4a1ed8dd0fcf60492/system.journal corrupted or uncleanly shut down  renaming and replacing.
+
+-----------
+
+5/30/2025 - gmt +7. the csv uses gmt +0
+
+Open and done some basic functionalities of the app.
+
+
+22.28 discord launcher
+22.31 discord app
+22.33 browser
+22.34 minimize browser -> calkulator
+22.35 File Manager, image viewer
+22.36 calculator exit, web browsert lagi
+22.37 close browser, buka app center
+22.38 close app center, close image viewer, file manager
+22.39 discord <-> file manager <-> image viewer
+22.40 close discord, file manager, image viewer.,
+22.41 exit discord 
+22.45 shutdown
