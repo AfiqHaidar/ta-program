@@ -1,0 +1,53 @@
+{
+    "web_activity_machine": [
+        {
+            "name": "web_activity_20250607_035204",
+            "initial_state": "Web : youtube.com",
+            "states": [
+                "Web : youtube.com",
+                "Web : google.com",
+                "Search Engine google: gopay",
+                "Web : youtube.com/results",
+                "Web : youtube.com/watch"
+            ],
+            "triggers": [
+                "performed_search",
+                "accessed_website_direct",
+                "accessed_website_link"
+            ],
+            "transitions": [
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine google: gopay",
+                    "dest": "Web : youtube.com"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : google.com",
+                    "dest": "Search Engine google: gopay"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : youtube.com",
+                    "dest": "Web : google.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : youtube.com",
+                    "dest": "Web : youtube.com/results"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : youtube.com/results",
+                    "dest": "Web : youtube.com/watch"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : youtube.com/watch",
+                    "dest": "Web : google.com"
+                }
+            ],
+            "functions": {}
+        }
+    ]
+}

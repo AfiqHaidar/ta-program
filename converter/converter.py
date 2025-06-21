@@ -17,6 +17,7 @@ import csv
 import json
 import os
 import importlib.util
+import time
 from datetime import datetime
 
 # ==== CONSTANTS ====
@@ -144,8 +145,14 @@ def main():
         sys.exit(1)
 
     try:
+        start_time = time.time()  # Start timer
+
         extract_function = load_script(script_type)
         generate_json(csv_file, OUTPUT_DIR, extract_function, script_type)
+
+        end_time = time.time()  # End timer
+        duration = end_time - start_time
+        print(f"Program completed in {duration:.2f} seconds.")
 
     except Exception as e:
         print(f"Error during conversion: {str(e)}")

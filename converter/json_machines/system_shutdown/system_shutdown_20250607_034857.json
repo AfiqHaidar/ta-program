@@ -1,0 +1,22 @@
+{
+    "system_shutdown_machine": [
+        {
+            "name": "system_shutdown_20250607_034857",
+            "initial_state": "System Shutdown",
+            "states": [
+                "System Shutdown"
+            ],
+            "triggers": [
+                "shutdown_completed"
+            ],
+            "transitions": [
+                {
+                    "trigger": "shutdown_completed",
+                    "source": "Initiating Shutdown",
+                    "dest": "System Shutdown"
+                }
+            ],
+            "functions": {}
+        }
+    ]
+}

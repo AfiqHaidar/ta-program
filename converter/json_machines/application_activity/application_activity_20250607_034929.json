@@ -1,0 +1,14 @@
+{
+    "application_activity_machine": [
+        {
+            "name": "application_activity_20250607_034929",
+            "initial_state": "Desktop",
+            "states": [
+                "Desktop"
+            ],
+            "triggers": [],
+            "transitions": [],
+            "functions": {}
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "application_activity_machine": [
+        {
+            "name": "application_activity_20250607_035046",
+            "initial_state": "Desktop",
+            "states": [
+                "Desktop",
+                "firefox",
+                "firmware-updater",
+                "snap-store",
+                "snapd-desktop-integration",
+                "evolution\\x2dalarm\\x2dnotify",
+                "settingsdaemon.diskutilitynotify",
+                "discord",
+                "calculator"
+            ],
+            "triggers": [
+                "launch_evolution\\x2dalarm\\x2dnotify",
+                "close_firmware-updater",
+                "launch_discord",
+                "close_calculator",
+                "close_snapd-desktop-integration",
+                "close_snap-store",
+                "launch_firefox",
+                "close_discord",
+                "close_firefox",
+                "launch_firmware-updater",
+                "launch_settingsdaemon.diskutilitynotify",
+                "launch_snap-store",
+                "launch_snapd-desktop-integration",
+                "launch_calculator"
+            ],
+            "transitions": [
+                {
+                    "trigger": "launch_calculator",
+                    "source": "Desktop",
+                    "dest": "calculator"
+                },
+                {
+                    "trigger": "launch_discord",
+                    "source": "Desktop",
+                    "dest": "discord"
+                },
+                {
+                    "trigger": "launch_evolution\\x2dalarm\\x2dnotify",
+                    "source": "Desktop",
+                    "dest": "evolution\\x2dalarm\\x2dnotify"
+                },
+                {
+                    "trigger": "launch_firefox",
+                    "source": "Desktop",
+                    "dest": "firefox"
+                },
+                {
+                    "trigger": "launch_firmware-updater",
+                    "source": "Desktop",
+                    "dest": "firmware-updater"
+                },
+                {
+                    "trigger": "launch_snap-store",
+                    "source": "Desktop",
+                    "dest": "snap-store"
+                },
+                {
+                    "trigger": "launch_snapd-desktop-integration",
+                    "source": "Desktop",
+                    "dest": "snapd-desktop-integration"
+                },
+                {
+                    "trigger": "close_calculator",
+                    "source": "calculator",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_snap-store",
+                    "source": "calculator",
+                    "dest": "snap-store"
+                },
+                {
+                    "trigger": "close_discord",
+                    "source": "discord",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_firefox",
+                    "source": "discord",
+                    "dest": "firefox"
+                },
+                {
+                    "trigger": "launch_settingsdaemon.diskutilitynotify",
+                    "source": "evolution\\x2dalarm\\x2dnotify",
+                    "dest": "settingsdaemon.diskutilitynotify"
+                },
+                {
+                    "trigger": "close_firefox",
+                    "source": "firefox",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_calculator",
+                    "source": "firefox",
+                    "dest": "calculator"
+                },
+                {
+                    "trigger": "launch_firefox",
+                    "source": "firefox",
+                    "dest": "firefox"
+                },
+                {
+                    "trigger": "close_firmware-updater",
+                    "source": "firmware-updater",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_discord",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "discord"
+                },
+                {
+                    "trigger": "launch_evolution\\x2dalarm\\x2dnotify",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "evolution\\x2dalarm\\x2dnotify"
+                },
+                {
+                    "trigger": "launch_firefox",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "firefox"
+                },
+                {
+                    "trigger": "launch_snap-store",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "snap-store"
+                },
+                {
+                    "trigger": "close_snap-store",
+                    "source": "snap-store",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "close_snapd-desktop-integration",
+                    "source": "snapd-desktop-integration",
+                    "dest": "Desktop"
+                }
+            ],
+            "functions": {}
+        }
+    ]
+}

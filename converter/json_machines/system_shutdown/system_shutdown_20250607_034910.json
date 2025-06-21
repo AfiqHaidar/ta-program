@@ -1,0 +1,12 @@
+{
+    "system_shutdown_machine": [
+        {
+            "name": "system_shutdown_20250607_034910",
+            "initial_state": "unknown",
+            "states": [],
+            "triggers": [],
+            "transitions": [],
+            "functions": {}
+        }
+    ]
+}

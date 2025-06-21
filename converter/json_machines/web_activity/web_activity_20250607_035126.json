@@ -1,0 +1,330 @@
+{
+    "web_activity_machine": [
+        {
+            "name": "web_activity_20250607_035126",
+            "initial_state": "Web : mozilla.org/privacy/firefox",
+            "states": [
+                "Web : mozilla.org/privacy/firefox",
+                "Web : mozilla.org/en-US/privacy/firefox",
+                "Search Engine google: download zoom for ubuntu",
+                "Web : zoom.us/download",
+                "Web : zoom.us/client/6.4.6.1370/zoom_amd64.deb",
+                "File: zoom_amd64.deb",
+                "Search Engine google: y",
+                "Web : youtube.com",
+                "Web : youtube.com/results",
+                "Web : youtube.com/watch",
+                "Search Engine google: sql injection",
+                "Web : w3schools.com/sql/sql_injection.asp",
+                "Search Engine google: bing",
+                "Web : bing.com",
+                "Search Engine bing: firefox",
+                "Web : bing.com/ck/a",
+                "Web : mozilla.org/id/firefox/new",
+                "Web : mozilla.org/id/firefox/download",
+                "Web : download.mozilla.org",
+                "File: firefox-138.0.4.tar.xz",
+                "Web : google.com",
+                "Search Engine google: cat picture",
+                "Search Engine google: dog videos download",
+                "Web : pexels.com/search/videos/dog",
+                "Web : pexels.com/download/video/3191251",
+                "File: 3191251-uhd_4096_2160_25fps.mp4",
+                "Web : discordapp.com/handoff",
+                "Web : discord.com/handoff",
+                "Web : 127.0.0.1:6463/rpc",
+                "Web : discordapp.com",
+                "Web : discord.com",
+                "Search Engine google: gopay",
+                "Search Engine google: penonton film jumbo",
+                "Web : duckduckgo.com",
+                "Search Engine bing: code blue rivals",
+                "Search Engine duckduckgo: firefox dev",
+                "Web : yahoo.com",
+                "Search Engine search.yahoo: elon musk",
+                "Web : brave.com",
+                "Search Engine search.brave: sugar rush",
+                "Web : cnnindonesia.com/hiburan/20250530054717-220-1234615/jumbo-tembus-10-juta-penonton-kian-dekat-salip-kkn-di-desa-penari",
+                "Web : beebom.com/blue-lock-rivals-codes",
+                "Web : mozilla.org/en-US/firefox/developer",
+                "Web : en.wikipedia.org/wiki/Elon_Musk",
+                "Web : imdb.com/title/tt8680560"
+            ],
+            "triggers": [
+                "accessed_website_direct",
+                "performed_search",
+                "downloaded_file",
+                "accessed_website_link",
+                "accessed_website_redirect"
+            ],
+            "transitions": [
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "File: 3191251-uhd_4096_2160_25fps.mp4",
+                    "dest": "Web : discordapp.com/handoff"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "File: firefox-138.0.4.tar.xz",
+                    "dest": "Web : google.com"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "File: zoom_amd64.deb",
+                    "dest": "Search Engine google: y"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Search Engine bing: code blue rivals",
+                    "dest": "Search Engine duckduckgo: firefox dev"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine bing: code blue rivals",
+                    "dest": "Web : beebom.com/blue-lock-rivals-codes"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine bing: firefox",
+                    "dest": "Web : bing.com/ck/a"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine bing: firefox",
+                    "dest": "Web : mozilla.org/id/firefox/new"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine duckduckgo: firefox dev",
+                    "dest": "Web : yahoo.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine google: bing",
+                    "dest": "Web : bing.com"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Search Engine google: cat picture",
+                    "dest": "Search Engine google: dog videos download"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine google: dog videos download",
+                    "dest": "Web : pexels.com/search/videos/dog"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine google: download zoom for ubuntu",
+                    "dest": "Web : zoom.us/download"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine google: gopay",
+                    "dest": "Web : youtube.com"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine google: penonton film jumbo",
+                    "dest": "Web : bing.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine google: sql injection",
+                    "dest": "Web : w3schools.com/sql/sql_injection.asp"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine google: y",
+                    "dest": "Web : youtube.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine search.brave: sugar rush",
+                    "dest": "Web : cnnindonesia.com/hiburan/20250530054717-220-1234615/jumbo-tembus-10-juta-penonton-kian-dekat-salip-kkn-di-desa-penari"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine search.yahoo: elon musk",
+                    "dest": "Web : brave.com"
+                },
+                {
+                    "trigger": "accessed_website_redirect",
+                    "source": "Web : 127.0.0.1:6463/rpc",
+                    "dest": "Web : discordapp.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : beebom.com/blue-lock-rivals-codes",
+                    "dest": "Web : mozilla.org/en-US/firefox/developer"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : bing.com",
+                    "dest": "Search Engine bing: firefox"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : bing.com",
+                    "dest": "Web : duckduckgo.com"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : bing.com/ck/a",
+                    "dest": "Search Engine bing: code blue rivals"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : bing.com/ck/a",
+                    "dest": "Search Engine bing: firefox"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : brave.com",
+                    "dest": "Search Engine search.brave: sugar rush"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : cnnindonesia.com/hiburan/20250530054717-220-1234615/jumbo-tembus-10-juta-penonton-kian-dekat-salip-kkn-di-desa-penari",
+                    "dest": "Web : bing.com/ck/a"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : discord.com",
+                    "dest": "Web : youtube.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : discord.com/handoff",
+                    "dest": "Web : 127.0.0.1:6463/rpc"
+                },
+                {
+                    "trigger": "accessed_website_redirect",
+                    "source": "Web : discordapp.com",
+                    "dest": "Web : discord.com"
+                },
+                {
+                    "trigger": "accessed_website_redirect",
+                    "source": "Web : discordapp.com/handoff",
+                    "dest": "Web : discord.com/handoff"
+                },
+                {
+                    "trigger": "downloaded_file",
+                    "source": "Web : download.mozilla.org",
+                    "dest": "File: firefox-138.0.4.tar.xz"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : duckduckgo.com",
+                    "dest": "Search Engine bing: code blue rivals"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : en.wikipedia.org/wiki/Elon_Musk",
+                    "dest": "Web : imdb.com/title/tt8680560"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : google.com",
+                    "dest": "Search Engine google: gopay"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : google.com",
+                    "dest": "Search Engine google: penonton film jumbo"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : google.com",
+                    "dest": "Search Engine google: sql injection"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : mozilla.org/en-US/firefox/developer",
+                    "dest": "Web : en.wikipedia.org/wiki/Elon_Musk"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : mozilla.org/en-US/privacy/firefox",
+                    "dest": "Search Engine google: download zoom for ubuntu"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : mozilla.org/id/firefox/download",
+                    "dest": "Web : download.mozilla.org"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : mozilla.org/id/firefox/new",
+                    "dest": "Web : mozilla.org/id/firefox/download"
+                },
+                {
+                    "trigger": "accessed_website_redirect",
+                    "source": "Web : mozilla.org/privacy/firefox",
+                    "dest": "Web : mozilla.org/en-US/privacy/firefox"
+                },
+                {
+                    "trigger": "downloaded_file",
+                    "source": "Web : pexels.com/download/video/3191251",
+                    "dest": "File: 3191251-uhd_4096_2160_25fps.mp4"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : pexels.com/search/videos/dog",
+                    "dest": "Web : pexels.com/download/video/3191251"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : w3schools.com/sql/sql_injection.asp",
+                    "dest": "Search Engine google: bing"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : w3schools.com/sql/sql_injection.asp",
+                    "dest": "Search Engine google: cat picture"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : yahoo.com",
+                    "dest": "Search Engine search.yahoo: elon musk"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : youtube.com",
+                    "dest": "Web : google.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : youtube.com",
+                    "dest": "Web : youtube.com/results"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : youtube.com/results",
+                    "dest": "Web : youtube.com/watch"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : youtube.com/watch",
+                    "dest": "Search Engine google: sql injection"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : youtube.com/watch",
+                    "dest": "Web : google.com"
+                },
+                {
+                    "trigger": "downloaded_file",
+                    "source": "Web : zoom.us/client/6.4.6.1370/zoom_amd64.deb",
+                    "dest": "File: zoom_amd64.deb"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : zoom.us/download",
+                    "dest": "Web : zoom.us/client/6.4.6.1370/zoom_amd64.deb"
+                }
+            ],
+            "functions": {}
+        }
+    ]
+}

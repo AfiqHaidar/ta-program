@@ -1,0 +1,107 @@
+{
+    "application_activity_machine": [
+        {
+            "name": "application_activity_20250607_035026",
+            "initial_state": "Desktop",
+            "states": [
+                "Desktop",
+                "evolution\\x2dalarm\\x2dnotify",
+                "settingsdaemon.diskutilitynotify",
+                "discord",
+                "firefox",
+                "calculator",
+                "snap-store"
+            ],
+            "triggers": [
+                "close_discord",
+                "launch_calculator",
+                "close_snap-store",
+                "launch_firefox",
+                "launch_settingsdaemon.diskutilitynotify",
+                "launch_evolution\\x2dalarm\\x2dnotify",
+                "close_firefox",
+                "close_calculator",
+                "launch_discord",
+                "launch_snap-store"
+            ],
+            "transitions": [
+                {
+                    "trigger": "launch_calculator",
+                    "source": "Desktop",
+                    "dest": "calculator"
+                },
+                {
+                    "trigger": "launch_discord",
+                    "source": "Desktop",
+                    "dest": "discord"
+                },
+                {
+                    "trigger": "launch_evolution\\x2dalarm\\x2dnotify",
+                    "source": "Desktop",
+                    "dest": "evolution\\x2dalarm\\x2dnotify"
+                },
+                {
+                    "trigger": "launch_snap-store",
+                    "source": "Desktop",
+                    "dest": "snap-store"
+                },
+                {
+                    "trigger": "close_calculator",
+                    "source": "calculator",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_snap-store",
+                    "source": "calculator",
+                    "dest": "snap-store"
+                },
+                {
+                    "trigger": "close_discord",
+                    "source": "discord",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_firefox",
+                    "source": "discord",
+                    "dest": "firefox"
+                },
+                {
+                    "trigger": "launch_settingsdaemon.diskutilitynotify",
+                    "source": "evolution\\x2dalarm\\x2dnotify",
+                    "dest": "settingsdaemon.diskutilitynotify"
+                },
+                {
+                    "trigger": "close_firefox",
+                    "source": "firefox",
+                    "dest": "Desktop"
+                },
+                {
+                    "trigger": "launch_calculator",
+                    "source": "firefox",
+                    "dest": "calculator"
+                },
+                {
+                    "trigger": "launch_discord",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "discord"
+                },
+                {
+                    "trigger": "launch_evolution\\x2dalarm\\x2dnotify",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "evolution\\x2dalarm\\x2dnotify"
+                },
+                {
+                    "trigger": "launch_firefox",
+                    "source": "settingsdaemon.diskutilitynotify",
+                    "dest": "firefox"
+                },
+                {
+                    "trigger": "close_snap-store",
+                    "source": "snap-store",
+                    "dest": "Desktop"
+                }
+            ],
+            "functions": {}
+        }
+    ]
+}

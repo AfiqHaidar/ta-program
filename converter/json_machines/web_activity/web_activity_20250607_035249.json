@@ -1,0 +1,108 @@
+{
+    "web_activity_machine": [
+        {
+            "name": "web_activity_20250607_035249",
+            "initial_state": "Search Engine google: penonton film jumbo",
+            "states": [
+                "Search Engine google: penonton film jumbo",
+                "Web : bing.com",
+                "Web : duckduckgo.com",
+                "Search Engine bing: code blue rivals",
+                "Search Engine duckduckgo: firefox dev",
+                "Web : yahoo.com",
+                "Search Engine search.yahoo: elon musk",
+                "Web : brave.com",
+                "Search Engine search.brave: sugar rush",
+                "Web : cnnindonesia.com/hiburan/20250530054717-220-1234615/jumbo-tembus-10-juta-penonton-kian-dekat-salip-kkn-di-desa-penari",
+                "Web : bing.com/ck/a",
+                "Web : beebom.com/blue-lock-rivals-codes",
+                "Web : mozilla.org/en-US/firefox/developer",
+                "Web : en.wikipedia.org/wiki/Elon_Musk",
+                "Web : imdb.com/title/tt8680560"
+            ],
+            "triggers": [
+                "accessed_website_direct",
+                "performed_search",
+                "accessed_website_link"
+            ],
+            "transitions": [
+                {
+                    "trigger": "performed_search",
+                    "source": "Search Engine bing: code blue rivals",
+                    "dest": "Search Engine duckduckgo: firefox dev"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine bing: code blue rivals",
+                    "dest": "Web : beebom.com/blue-lock-rivals-codes"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine duckduckgo: firefox dev",
+                    "dest": "Web : yahoo.com"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine google: penonton film jumbo",
+                    "dest": "Web : bing.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Search Engine search.brave: sugar rush",
+                    "dest": "Web : cnnindonesia.com/hiburan/20250530054717-220-1234615/jumbo-tembus-10-juta-penonton-kian-dekat-salip-kkn-di-desa-penari"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Search Engine search.yahoo: elon musk",
+                    "dest": "Web : brave.com"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : beebom.com/blue-lock-rivals-codes",
+                    "dest": "Web : mozilla.org/en-US/firefox/developer"
+                },
+                {
+                    "trigger": "accessed_website_direct",
+                    "source": "Web : bing.com",
+                    "dest": "Web : duckduckgo.com"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : bing.com/ck/a",
+                    "dest": "Search Engine bing: code blue rivals"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : brave.com",
+                    "dest": "Search Engine search.brave: sugar rush"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : cnnindonesia.com/hiburan/20250530054717-220-1234615/jumbo-tembus-10-juta-penonton-kian-dekat-salip-kkn-di-desa-penari",
+                    "dest": "Web : bing.com/ck/a"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : duckduckgo.com",
+                    "dest": "Search Engine bing: code blue rivals"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : en.wikipedia.org/wiki/Elon_Musk",
+                    "dest": "Web : imdb.com/title/tt8680560"
+                },
+                {
+                    "trigger": "accessed_website_link",
+                    "source": "Web : mozilla.org/en-US/firefox/developer",
+                    "dest": "Web : en.wikipedia.org/wiki/Elon_Musk"
+                },
+                {
+                    "trigger": "performed_search",
+                    "source": "Web : yahoo.com",
+                    "dest": "Search Engine search.yahoo: elon musk"
+                }
+            ],
+            "functions": {}
+        }
+    ]
+}
